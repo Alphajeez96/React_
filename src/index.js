@@ -1,35 +1,42 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-// import home from './components/home'
+new readimport React from "react";
+import ReactDOM from "react-dom";
 
-const home = () => {
-    console.log('i am learning this react cby force')
+const Header = (props) => {
     return ( <
         div >
         <
-        p > Thi is home < /p> < /
+        h1 > { props.course } < /h1>{" "} < /
         div >
-    )
-}
+    );
+};
+
+const Content = (props) => {
+    return ( <
+        div >
+        <
+        p > { props.part } < /p>{" "} < /
+        div >
+    );
+};
+
 const App = () => {
-    const now = new Date()
-    const a = 10
-    const b = 20
-    console.log(now)
+    const course = "Half Stack application development";
+    const part1 = "Fundamentals of React";
+    const exercises1 = 10;
+    const part2 = "Using props to pass data";
+    const exercises2 = 7;
+    const part3 = "State of a component";
+    const exercises3 = 14;
+
     return ( <
         div >
         <
-        p > Hello world, it is { now.toString() } < /p> <
-        p > { a }
-        plus { b }
-        is { a + b } <
-        /p>   < /
+        Header course = { course }
+        /> <
+        Content part = { part1 }
+        />{" "} < /
         div >
-        <
-        home / >
+    );
+};
 
-
-
-    )
-}
-ReactDOM.render( < App / > , document.getElementById('root'))
+ReactDOM.render( < App / > , document.getElementById("root"));
