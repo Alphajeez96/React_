@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 const Hello = (props) => {
@@ -14,8 +14,8 @@ const Hello = (props) => {
         Hello { props.name }, you are { props.age }
         years old { " " } <
         /p>{" "} <
-        p > So you were probably born in { bornYear() } < /p>{" "} <
-        /div>
+        p > So you were probably born in { bornYear() } < /p>{" "} < /
+        div >
     );
 };
 
@@ -23,14 +23,24 @@ const App = () => {
     const name = "Peter";
     const age = prompt("how old are you");
 
+
+
+
+
+
+
+
+
+
+
     return ( <
         div >
         <
         h1 > Greetings < /h1> <Hello name="Maya" age={26 + 10} / > { " " } <
         Hello name = { name }
         age = { age }
-        />{" "} <
-        /div>
+        />{" "} < /
+        div >
     );
 };
 
