@@ -1,41 +1,36 @@
-new readimport React from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-const Header = (props) => {
-    return ( <
-        div >
-        <
-        h1 > { props.course } < /h1>{" "} < /
-        div >
-    );
-};
+const Hello = (props) => {
+    const bornYear = () => {
+        const yearNow = new Date().getFullYear();
+        return yearNow - props.age;
+    };
 
-const Content = (props) => {
     return ( <
         div >
         <
-        p > { props.part } < /p>{" "} < /
-        div >
+        p >
+        Hello { props.name }, you are { props.age }
+        years old { " " } <
+        /p>{" "} <
+        p > So you were probably born in { bornYear() } < /p>{" "} <
+        /div>
     );
 };
 
 const App = () => {
-    const course = "Half Stack application development";
-    const part1 = "Fundamentals of React";
-    const exercises1 = 10;
-    const part2 = "Using props to pass data";
-    const exercises2 = 7;
-    const part3 = "State of a component";
-    const exercises3 = 14;
+    const name = "Peter";
+    const age = prompt("how old are you");
 
     return ( <
         div >
         <
-        Header course = { course }
-        /> <
-        Content part = { part1 }
-        />{" "} < /
-        div >
+        h1 > Greetings < /h1> <Hello name="Maya" age={26 + 10} / > { " " } <
+        Hello name = { name }
+        age = { age }
+        />{" "} <
+        /div>
     );
 };
 
